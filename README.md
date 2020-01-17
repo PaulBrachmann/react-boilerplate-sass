@@ -65,6 +65,7 @@ The project is structured in the following way:
 - `public/`: Static files copied over to the build
 - `src/`: Application source
   - `app/`: The app's entry point
+  - `components/`: Components that do not hook into the application store
   - `i18n/`: Internationalization config and translations
   - `lib/`: Application-independent library code that could later be extracted into its own package
   - `models/`: mobx-state-tree models
