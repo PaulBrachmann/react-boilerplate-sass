@@ -15,5 +15,5 @@ export interface IStyleSheet {
   /** Merges down multiple css class names into one string usable by React's className prop. */
   className(...styles: string[]): string | undefined;
   /** Transforms the given styles to be used by the style attribute. */
-  style(...styles: OutputStyle[]): any;
+  style(...styles: InputStyle[]): OutputStyle | undefined;
 }

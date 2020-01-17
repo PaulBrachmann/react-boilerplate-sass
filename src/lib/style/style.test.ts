@@ -2,6 +2,10 @@ import { className, style } from "./style";
 import { InputStyle } from "./types";
 
 describe("className", () => {
+  it("should return undefined when no class name is given", () => {
+    expect(className()).toBe(undefined);
+  });
+
   it("should return a class name", () => {
     expect(className("class1")).toBe("class1");
   });
@@ -22,8 +26,13 @@ describe("style", () => {
     style2 = { background: "#000" };
   });
 
+  it("should return undefined when no style is given", () => {
+    expect(style()).toBe(undefined);
+  });
+
   it("should return a style", () => {
-    expect(style(style1)).toEqual({ color: "#fff" });
+    expect(style(style1)).toBe(style1);
+    expect(style1).toEqual({ color: "#fff" });
   });
 
   it("should merge multiple styles", () => {
