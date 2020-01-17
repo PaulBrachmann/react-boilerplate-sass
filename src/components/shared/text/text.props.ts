@@ -21,4 +21,7 @@ export default interface TextProps
    * It takes precedence over children, but not `tx`.
    */
   text?: string;
+
+  /** The name of one of the text presets. */
+  preset?: string;
 }

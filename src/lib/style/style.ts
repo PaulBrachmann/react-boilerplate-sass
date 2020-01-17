@@ -2,8 +2,10 @@ import { InputStyle, OutputStyle } from "./types";
 
 export const hairlineWidth = 1;
 
-export const className = (...classNames: string[]) =>
-  classNames.length ? classNames.join(" ") : undefined;
+export const className = (...classNames: (string | false | undefined)[]) =>
+  classNames.length
+    ? classNames.filter((value) => Boolean(value)).join(" ")
+    : undefined;
 
 export const style = (...styles: InputStyle[]): OutputStyle | undefined =>
   styles.length

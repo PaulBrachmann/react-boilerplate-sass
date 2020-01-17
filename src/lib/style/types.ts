@@ -13,7 +13,7 @@ export interface IStyleSheet {
   hairlineWidth: number;
 
   /** Merges down multiple css class names into one string usable by React's className prop. */
-  className(...styles: string[]): string | undefined;
+  className(...styles: (string | false | undefined)[]): string | undefined;
   /** Transforms the given styles to be used by the style attribute. */
   style(...styles: InputStyle[]): OutputStyle | undefined;
 }

@@ -11,9 +11,9 @@ describe("className", () => {
   });
 
   it("should merge multiple class names", () => {
-    expect(className("class1", "class2", "class3 class4")).toBe(
-      "class1 class2 class3 class4",
-    );
+    expect(
+      className("class1", "class2", false, "class3 class4", undefined),
+    ).toBe("class1 class2 class3 class4");
   });
 });
 

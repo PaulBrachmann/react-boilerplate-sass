@@ -1,0 +1,28 @@
+@import "../../../theme/colors";
+
+.default {
+  font-size: 15;
+}
+
+.bold {
+  @extend .default;
+  font-weight: bold;
+}
+
+.header {
+  @extend .default;
+  font-size: 24;
+  font-weight: "bold";
+}
+
+.fieldLabel {
+  @extend .default;
+  color: $color-dim;
+  font-size: 13;
+}
+
+.secondary {
+  @extend .default;
+  color: $color-dim;
+  font-size: 9;
+}
