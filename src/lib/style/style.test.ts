@@ -36,7 +36,7 @@ describe("style", () => {
   });
 
   it("should merge multiple styles", () => {
-    expect(style(style1, style2)).toEqual({
+    expect(style(style1, style2, undefined)).toEqual({
       background: "#000",
       color: "#fff",
     });
@@ -51,7 +51,12 @@ describe("style", () => {
         style1,
         [style2],
         [],
-        [{}, [{}, { borderColor: "#f00", borderWidth: 1 }], { margin: 12 }],
+        [
+          {},
+          false,
+          [{}, { borderColor: "#f00", borderWidth: 1 }],
+          { margin: 12 },
+        ],
       ),
     ).toEqual({
       background: "#000",

@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 
 /** A style passed to further processing, before applied. */
-export type InputStyle = CSSProperties | InputStyle[];
+export type InputStyle = CSSProperties | false | undefined | InputStyle[];
 
 /** A processed style ready to be applied. */
 export type OutputStyle = CSSProperties;
