@@ -27,8 +27,6 @@ const Text: React.StatelessComponent<TextProps> = (props) => {
     tx && (data ? i18n.translateWithVars(tx, data) : i18n.translate(tx));
   const content = i18nText || text || children;
 
-  console.log(tx, data, i18nText);
-
   return (
     <span
       {...rest}
