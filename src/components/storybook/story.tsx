@@ -1,7 +1,10 @@
+import "../../index.scss";
+
 import React from "react";
 
 import { init } from "../../i18n";
 import { View } from "../shared";
+import styles from "./story.module.scss";
 
 export default class Story extends React.Component<{}, { ready: boolean }> {
   protected isCurrentlyMounted = false;
@@ -20,6 +23,6 @@ export default class Story extends React.Component<{}, { ready: boolean }> {
   public render() {
     if (!this.state || !this.state.ready) return null;
 
-    return <View style={{ flex: 1 }}>{this.props.children}</View>;
+    return <View className={styles.story}>{this.props.children}</View>;
   }
 }
